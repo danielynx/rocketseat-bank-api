@@ -29,7 +29,9 @@ export default class CreateTransactions1596067651663
           },
           {
             name: 'value',
-            type: 'numeric',
+            type: 'decimal',
+            precision: 10,
+            scale: 2,
           },
           {
             name: 'category_id',
@@ -55,8 +57,8 @@ export default class CreateTransactions1596067651663
         columnNames: ['category_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'categories',
-        onDelete: 'RESTRICT',
         onUpdate: 'CASCADE',
+        onDelete: 'RESTRICT',
       }),
     );
   }
